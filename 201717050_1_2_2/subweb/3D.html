@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="eu">
+	<link href="../css/sub.css" rel="stylesheet">
+	<style>
+	body
+	{
+	word-break:keep-all;
+	background-color:black;
+	font-size:100%;
+	}
+	</style>
+
+<script>
+	function find()
+	{	console.log("ddd");
+	var n = document.getElementById("search").value;
+	window.open("https://www.google.co.kr/search?q="+n);
+	}
+
+	function pagenext()
+	{
+		var a=document.getElementById("pad");
+		var b=document.getElementById("pad2");
+		
+		a.style.opacity ="0";
+		a.style.transform ="translatex(-50%)scalex(0)";
+		b.style.display ="block";
+		del2;
+
+		var del2=setTimeout(function()
+	{
+	var b=document.getElementById("pad2");
+	b.style.opacity ="1";
+	},100);
+	}
+
+	function pagenext2()
+	{
+		var a=document.getElementById("pad");
+		var b=document.getElementById("pad2");
+		a.style.transform ="translatex(0%)scalex(1)";
+		a.style.opacity ="1";
+		b.style.opacity ="0";
+		del;
+
+	var del=setTimeout(function()
+	{
+	var b=document.getElementById("pad2");
+	b.style.display ="none";
+	},500);
+	
+	}
+	
+	function pagenext3()
+	{
+		var a=document.getElementById("pad2");
+		var b=document.getElementById("pad3");
+		
+		a.style.opacity ="0";
+		a.style.transform ="translatex(-50%)scalex(0)";
+		b.style.display ="block";
+		del2;
+
+		var del2=setTimeout(function()
+	{
+	var b=document.getElementById("pad3");
+	b.style.opacity ="1";
+	},100);
+	}
+
+
+	function pagenext4()
+	{
+		var a=document.getElementById("pad2");
+		var b=document.getElementById("pad3");
+		a.style.transform ="translatex(0%)scalex(1)";
+		a.style.opacity ="1";
+		b.style.opacity ="0";
+		del;
+
+	var del=setTimeout(function()
+	{
+	var b=document.getElementById("pad3");
+	b.style.display ="none";
+	},500);
+	
+	}
+</script>	
+
+  </head>
+  <body>
+		<div style="height:100%; width:96%;margin-left:2%; margin-top:2%;padding:1px;">
+		<div class="gall">
+		<div class="gall2">
+		google검색
+		<input type="text" id="search" onkeydown="if(event.keyCode==13)find()" style="display: inline; background-color:rgba(0,0,0,0); border:0; border-bottom: 3px solid black;border-right: 1px solid black; width:90%; height:40px; font-size:32px;">
+		<img src="../images/search.png" type="button" value="검색" style="display: inline;  width:30px; height:30px; margin-left:-50px; padding-top:3px; margin-bottom:-8px;cursor: pointer;" onclick="find()" >
+		</div>
+		<div class="gall2">
+		추천 자료
+		<hr style="margin-right:3%;">
+		<div class="gall3" onclick="window.open('https://www.youtube.com/watch?v=D9qt1cTH2r0');">
+		<center>
+		<img src="../images/yticon.png"style="width:95%; height:95%;"><br>
+		<span style="font-size:50%; padding-top:-50%;">3d object 생성</span>
+		</center>
+		</div>
+		<hr style="margin-right:3%;">
+		<div class="gall3"onclick="window.open('https://docs.unity3d.com/kr/current/ScriptReference/Transform.html');">
+		<center>
+		<img src="../images/uicon.png"style="width:70%; height:70%;"><br>
+		<span style="font-size:50%; padding-top:-50%;">유니티 transfrom 속성</span>
+		</center>
+		</div>
+		<hr style="margin-right:3%;">
+		<div class="gall3"onclick="window.open('https://www.youtube.com/watch?v=H5S_QrqSVwk');">
+		<center>
+		<img src="../images/yticon.png"style="width:95%; height:95%;"><br>
+		<span style="font-size:50%; padding-top:-50%;">material 사용법</span>
+		</center>
+		</div>
+		<hr style="margin-right:3%;">
+		<div class="gall3"onclick="window.open('https://www.youtube.com/watch?v=0Jc287z4Qpg');">
+		<center>
+		<img src="../images/yticon.png" style="width:95%; height:95%;"><br>
+		<span style="font-size:50%; padding-top:-50%;">prefeb 사용법</span>
+		</center>
+		</div>
+		<hr style="margin-right:3%;">
+
+		</div>
+		</div>
+		<div class="namedbox">
+		<span>UNITY 3D</span>
+		<hr style="height:7px;border-top:2px solid black; border-bottom:5px solid black; ">
+
+		<div class="padbox" id="pad" style="z-index:1;">
+		<h2>UNITY로 게임 만들어보기</h2>
+		<img src="../images/3d1.png" style="width:95%; height:95%;">
+		<br>
+		<span>
+		이 유니티 프로젝트는 제가 유니티를 처음으로 공부하며 만든 게임으로 게임의 주제는 광물을 캐서 점점 성장하는 식의 3D형태의 클리커 게임입니다.<br>
+		3d렌더링을 통한 캐릭터와 애니메이션, asset을 응용한 광물, C#기반의 스크립트
+		를 이용하였습니다.
+		</span>
+		<hr>
+		<h2>3D object</h2>
+		<span style="float:left;"><img src="../images/3d2.png" style="width:40%; margin-right:1%;float:left;">유니티는 3D object와 2D object 등등 다양한 기본적으로 사용할 수 있는 여러가지 object를 지원해줍니다.<br><br> 그것들은 3차원 좌표계(x,y,z)를 이용하며 그 이외에 유니티 라이브러리에서 물리를 적용시키면 질량을 다루기도 합니다.
+
+		<br> Cube:정육면체<br> Sphere:구<br> Capsule:캡슐형태 <br>Cylinder:원기둥<br> Plane:평면<br> Quad:한면만보이는 세로형 평면<br>Ragdoll:사람형체<br>Terrain:지형<br>Tree:나무
+		<br>Wind Zone:바람 효과<br>3D Text:3D 글씨
+		</span>
+		<img src="../images/3d3.png" style="width:95%; margin-top:1%;">
+		<span><br><br>
+		위의 사진들은 Cylinder, Cpsule, Cube를 다뤄본 사진입니다. 기본적으로 유니티에서 오브젝트가 가지고있는 Transform이라는 컴포넌트는 각도(Rotation), 크기(Scale), 위치(Position)을 다룰 수 있습니다. 
+		<br>
+		<br>
+		<br><br>
+		이 글에대한 추천자료<br><ul>
+		<li>'3d object 생성'</li>
+		<br>
+		<li>'유니티 transfrom 속성'</li>
+		</ul>
+		</span>
+		<div class="pagebox">
+		<span onclick="pagenext()"><a href="#">다음페이지</a></span>
+		</div>
+		</div>
+
+
+		<div class="padbox" id="pad2" style="position:absolute; display:none; opacity:0;">
+		<div style="margin-bottom:5%; float:left;">
+		<img src="../images/3d41.png" style=" padding-top:1%;width:40%; height:50%; float:left;">
+		<img src="../images/3d42.png" style="margin-left:1%;margin-top:1%; margin-bottom:5%;width:54%;">
+		<br><h2>material</h2>
+		<span>
+		유니티에서 기본적으로 생성할 수 있는 객체들 중에 material이라는 것이있습니다.
+		뜻으로는 물질이라는 의미를 가지고있으며 전에 자신이 만들어둔 오브젝트에 적용할 수 있습니다.
+		material이 가지고있는 기능들 중에는 광채, 색감(rgba코드와 hex color 코드를 지원합니다), 부드러움 등이있습니다.<br><br>
+		이 meaterial들은 2d object, 3d object, 렌더링파일(obj)에 모두 이용이 가능합니다.
+		material속에 사진또는 그림을 집어넣어서 사용할수도 있으며 이 파일의 shader라는 설정에따라 외부에 보여지는 형태가 정해집니다.<br>
+		
+		</span>
+		
+		</div>
+		<hr style="width:100%;">
+		<h2>material을 사용한 게임내 오브젝트들</h2>
+		<img src="../images/3d5.png" style="padding-top:1%;width:33.5%; height:50%; ">
+		<img src="../images/3d51.png" style="padding-top:1%;width:61.5%;">
+		<hr style="margin-top:1%;">
+		<h2>prefeb</h2>
+		<img src="../images/3d61.png" style="padding-top:1%;width:32.5%;">
+		<img src="../images/3d6.png" style="padding-top:1%;width:62.5%;">
+		<span>
+		<br>사진에 보이는 개체들은 필자가 유니티로 직접만든 prefeb이란 것입니다.
+		prefeb은 개체를 묶어서 저장하거나 따로 저장하여서 언제든지 그 개체를 불러서 사용할 수 있도록 해줍니다. 그 개체에대한 복사본을 만들어 낼 수 있는 매우 편리한 장점이 있습니다.
+		
+		<br><br><br><br><br><br><br><br>
+		이 글에대한 추천자료<br><ul>
+		<li>'material 사용법'</li>
+		<br>
+		<li>'prefeb 사용법'</li>
+		</ul>
+		</span>
+		<div class="pagebox">
+		<span onclick="pagenext2()"><a href="#">이전페이지</a> |</span>
+		<span onclick="pagenext3()"><a href="#">다음페이지</a></span>
+		</div>
+		</div>
+
+
+
+		<div class="padbox" id="pad3" style="position:absolute; display:none; opacity:0;">
+		<div style="margin-bottom:5%; float:left;">
+		<h2>현재 진행중인 UNITY게임 프로젝트</h2>
+		<img src="../images/3d7.png" style="width:47%;">
+		<img src="../images/3d71.png" style="width:45%;">
+		<br>
+		<span>
+		처음 출시를 목표로하는 '3D 공튀기기'는 가벼운 기능을 탑재했지만 수많은 방해요소와 신기한 기능들을 탑재시켜서 스테이지를 주고 클리어를하는 형식의 게임으로 기획되었습니다.
+		앞으로 특수한 기능을 가진 블럭들과 카메라의 다양한 방향전환 기능 그리고 UI요소들을 직접 제작할 예정입니다.
+		현재 플레이어 공의 방향키별 이동 기능이 구현되어있으며 플레이어가 지나가는 것을 방해하는 요소 몇가지가 있습니다. 카메라기능은 개선중에 있습니다.
+		</span>
+		<hr>
+		<h2>공튀기기 초기 구상</h2>
+		<img src="../images/기획서.jpg" style="width:95%;">
+		<hr>
+		<h2>키보드로의 이동 스크립트</h2>
+		<iframe src="code2.html" style="width:95%; height:300px;"></iframe>
+		<span><br><br>
+		현재 키보드로의 이동 스크립트만 되어있으며 이전에 만들어보았던 게임에서 만든 터치형 UI를 개선하여서 이용하거나 조이스틱 형태의 디자인을 만들 것입니다.
+		</span>
+		<div class="pagebox">
+		<span onclick="pagenext4()"><a href="#">이전페이지</a></span>
+		</div>
+		</div>
+
+		</div>
+		</div>
+  </body>
+</html>

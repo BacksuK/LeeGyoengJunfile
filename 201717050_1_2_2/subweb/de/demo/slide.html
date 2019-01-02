@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=550, initial-scale=1">
+
+    <link rel="stylesheet" href="../dist/jquery.flipster.min.css">
+
+    <script src="jquery.min.js"></script>
+    <script src="../dist/jquery.flipster.min.js"></script>
+	<style>
+	body{background-color:black;}
+	img{height:800px; width:800px;}
+	</style>
+</head>
+<body>
+
+
+<article id="demo-flat" class="demo">
+
+
+    <div id="flat">
+        <ul>
+            <li data-flip-title="Red">
+                <img src="img/1.png">
+            </li>
+
+            <li data-flip-title="Razzmatazz" data-flip-category="Purples">
+                <img src="img/2.png">
+             </li>
+
+            <li data-flip-title="Deep Lilac" data-flip-category="Purples">
+                <img src="img/3.png">
+            </li>
+        </ul>
+    </div>
+
+<script>
+    var flat = $("#flat").flipster({
+        style: 'flat',
+        spacing: -0.25
+    });
+</script>
+
+</article>
+
+
+</body>
+</html>

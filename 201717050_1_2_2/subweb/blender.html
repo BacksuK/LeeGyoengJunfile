@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="eu">
+	<link href="../css/sub.css" rel="stylesheet">
+	<style>
+	body
+	{
+	word-break:keep-all;
+	background-color:black;
+	font-size:100%;
+	}
+	</style>
+
+<script>
+	function find()
+	{	console.log("ddd");
+	var n = document.getElementById("search").value;
+	window.open("https://www.google.co.kr/search?q="+n);
+	}
+
+	function pagenext()
+	{
+		var a=document.getElementById("pad");
+		var b=document.getElementById("pad2");
+		
+		a.style.opacity ="0";
+		a.style.transform ="translatex(-50%)scalex(0)";
+		b.style.display ="block";
+		del2;
+
+		var del2=setTimeout(function()
+	{
+	var b=document.getElementById("pad2");
+	b.style.opacity ="1";
+	},100);
+	}
+
+	function pagenext2()
+	{
+		var a=document.getElementById("pad");
+		var b=document.getElementById("pad2");
+		a.style.transform ="translatex(0%)scalex(1)";
+		a.style.opacity ="1";
+		b.style.opacity ="0";
+		del;
+
+	var del=setTimeout(function()
+	{
+	var b=document.getElementById("pad2");
+	b.style.display ="none";
+	},500);
+	
+	}
+	
+	function pagenext3()
+	{
+		var a=document.getElementById("pad2");
+		var b=document.getElementById("pad3");
+		
+		a.style.opacity ="0";
+		a.style.transform ="translatex(-50%)scalex(0)";
+		b.style.display ="block";
+		del2;
+
+		var del2=setTimeout(function()
+	{
+	var b=document.getElementById("pad3");
+	b.style.opacity ="1";
+	},100);
+	}
+
+
+	function pagenext4()
+	{
+		var a=document.getElementById("pad2");
+		var b=document.getElementById("pad3");
+		a.style.transform ="translatex(0%)scalex(1)";
+		a.style.opacity ="1";
+		b.style.opacity ="0";
+		del;
+
+	var del=setTimeout(function()
+	{
+	var b=document.getElementById("pad3");
+	b.style.display ="none";
+	},500);
+	
+	}
+</script>	
+
+  </head>
+  <body>
+		<div style="height:100%; width:96%;margin-left:2%; margin-top:2%;padding:1px;">
+		<div class="gall">
+		<div class="gall2">
+		google검색
+		<input type="text" id="search" onkeydown="if(event.keyCode==13)find()" style="display: inline; background-color:rgba(0,0,0,0); border:0; border-bottom: 3px solid black;border-right: 1px solid black; width:90%; height:40px; font-size:32px;">
+		<img src="../images/search.png" type="button" value="검색" style="display: inline;  width:30px; height:30px; margin-left:-50px; padding-top:3px; margin-bottom:-8px;cursor: pointer;" onclick="find()" >
+		</div>
+		<div class="gall2">
+		추천 자료
+		<hr style="margin-right:3%;">
+		<div class="gall3" onclick="window.open('#');">
+		<center>
+		<img src="../images/yticon.png"style="width:95%; height:95%;"><br>
+		<span style="font-size:50%; padding-top:-50%;">x</span>
+		</center>
+		</div>
+		<hr style="margin-right:3%;">
+		<div class="gall3"onclick="window.open('#');">
+		<center>
+		<img src="../images/uicon.png"style="width:70%; height:70%;"><br>
+		<span style="font-size:50%; padding-top:-50%;">x</span>
+		</center>
+		</div>
+		<hr style="margin-right:3%;">
+		<div class="gall3"onclick="window.open('#');">
+		<center>
+		<img src="../images/yticon.png"style="width:95%; height:95%;"><br>
+		<span style="font-size:50%; padding-top:-50%;">x</span>
+		</center>
+		</div>
+		<hr style="margin-right:3%;">
+		<div class="gall3"onclick="window.open('#');">
+		<center>
+		<img src="../images/yticon.png" style="width:95%; height:95%;"><br>
+		<span style="font-size:50%; padding-top:-50%;">x</span>
+		</center>
+		</div>
+		<hr style="margin-right:3%;">
+
+		</div>
+		</div>
+		<div class="namedbox">
+		<span>Blender</span>
+		<hr style="height:7px;border-top:2px solid black; border-bottom:5px solid black; ">
+
+		<div class="padbox" id="pad" style="z-index:1;">
+
+		<div class="pagebox">
+		<span onclick="pagenext()"><a href="#">다음페이지</a></span>
+		</div>
+		</div>
+
+
+		<div class="padbox" id="pad2" style="position:absolute; display:none; opacity:0;">
+
+		<div class="pagebox">
+		<span onclick="pagenext2()"><a href="#">이전페이지</a> |</span>
+		<span onclick="pagenext3()"><a href="#">다음페이지</a></span>
+		</div>
+		</div>
+
+
+
+		<div class="padbox" id="pad3" style="position:absolute; display:none; opacity:0;">
+		
+		<div class="pagebox">
+		<span onclick="pagenext4()"><a href="#">이전페이지</a></span>
+		</div>
+		</div>
+
+		</div>
+		</div>
+  </body>
+</html>

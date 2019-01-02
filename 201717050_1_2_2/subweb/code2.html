@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+ <head>
+
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body style="background: rgb(60,60,60)">
+ <span style="font-size:15px; color:white;">
+ <pre>
+using UnityEngine;
+using System.Collections;
+
+public class Move: MonoBehaviour
+{
+    public float speed;
+    public float xSpeed;
+    public Vector3 startPosition;
+    private Vector3 offset;
+    void Start()
+    {
+        startPosition = transform.position;
+    }
+    void Update()
+    {
+        float forwardMovement = 0f;
+        float turnMovement = 0f;
+        
+        if (this.gameObject.tag == "Player")
+        {
+            forwardMovement = Input.GetAxis("Vertical") * speed;
+            turnMovement = Input.GetAxis("Horizontal") * xSpeed;
+        }
+        transform.Translate(Vector3.forward * forwardMovement*0.02f);
+        transform.Translate(Vector3.right* turnMovement*0.02f);
+
+    }
+
+}
+</pre>
+</span>
+ </body>
+</html>
