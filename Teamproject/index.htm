@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>검색의 중심 SEA</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700" rel="stylesheet"/>
+<link href="css/screen.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="theme-color" content="#333">
+<link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
+
+<style>
+
+#digda a:hover
+{
+   color: #e7434e;
+}
+ul li
+{
+background-color:rgba(0,0,0,0.7);
+box-shadow:0px 5px 20px black; 
+}
+ul li:hover{float:right;
+font-size:30px;
+   cursor: pointer;
+   display:block;
+   background-color:rgb(80,80,80);
+   margin:-10px;
+    font-weight:bold;
+   box-shadow:0px 20px 50px black; 
+   transform: scaleX(1.1) scaleY(1.1) translatex(5%);
+   transition:0.3s;
+        border-radius: 10px;}
+</style>
+<script src="js/jquery-1.4.4.min.js"></script>
+<script src="js/slides.jquery.js"></script>
+<script>
+var $j144 = jQuery.noConflict();
+      $j144(document).ready(function($){
+         $('#slides').slides({
+            preload: false,
+         });
+      });
+</script>
+<script type="text/javascript"> 
+function bookmarksite(title,url) {
+   // Internet Explorer
+   if(document.all){
+      window.external.AddFavorite(url, title);
+   }
+   // Google Chrome
+   else if(window.chrome){
+      alert("Ctrl+D키를 누르시면 즐겨찾기에 추가하실 수 있습니다.");
+   }
+   // Firefox
+   else if (window.sidebar) // firefox
+   {
+      window.sidebar.addPanel(title, url, "");
+   }
+   // Opera
+   else if(window.opera && window.print)
+   { // opera
+      var elem = document.createElement('a');
+      elem.setAttribute('href',url);
+      elem.setAttribute('title',title);
+      elem.setAttribute('rel','sidebar');
+      elem.click();
+   }else if( window.external ) {
+      window.external.AddFavorite(url, title);
+    }
+}
+</script>
+
+<script>
+var searchc=0;
+function code0()
+{
+	var a=document.getElementById("bot");
+	a.style.backgroundColor="#00CC00";
+	searchc=0;
+}
+function code1()
+{
+	var a=document.getElementById("bot");
+	a.style.backgroundColor="#FF6600";
+	searchc=1;
+}
+function code2()
+{
+	var a=document.getElementById("bot");
+	a.style.backgroundColor="#CC0303";
+	searchc=2;
+}
+function code3()
+{
+	var a=document.getElementById("bot");
+	a.style.backgroundColor="#FFCC00";
+	searchc=3;
+}
+function code4()
+{
+	var a=document.getElementById("bot");
+	a.style.backgroundColor="#66CCFF";
+	searchc=4;
+}
+
+function find()
+{
+var inin=document.getElementById("searline").value;
+if(searchc==0)
+	{window.open("https://search.naver.com/search.naver?where=nexearch&query="+inin);}
+if(searchc==1)
+	{window.open("https://www.google.co.kr/search?q="+inin);}
+if(searchc==2)
+	{window.open("https://search.daum.net/nate?q="+inin);}
+if(searchc==3)
+	{window.open("https://www.bing.com/search?q="+inin);}
+if(searchc==4)
+	{window.open("https://search.daum.net/search?nil_profile=simpleurl&w=tot&q="+inin);}
+}
+
+
+</script>
+
+</head>
+
+<body class="home" id="page" style="background:white;">
+<!-- Header -->
+<header class="main-header">
+<div class="container">
+   <div class="header-content">
+      <div class="shake">
+      <a href="index.htm" style="animation-name: shake">
+      <img style="height: 100px" src="img/logo.png" alt="SEA"/>
+      </a>
+      </div>
+      <nav class="site-nav">
+      <ul class="clean-list site-links" id="digda">
+         <div style="display: inline-block; margin-right: 45px; color: #ffffff; text-transform: uppercase; font-size: 16px; font-weight: 700; font-family: "Raleway", sans-serif; letter-spacing: 0.04em;">
+         <a href ="javascript:bookmarksite('SEA - 검색의 중심', '')">즐겨찾기</a>
+         <div class="white_content" id="open">
+            <div>
+               <a style="font-size: 55px; float:right; padding-top: -150px;" href="#close"><i class="fa fa-times" aria-hidden="true"></i></a>
+               <p style="text-align: center">
+                  <h3>SEA 소개</h3>
+                  <hr>
+                  SEA 사이트입니다. <br>
+                  추후 추가 예정 입니다.
+               </p>
+            </div>
+         </div>
+         </div>
+      </ul>
+      <a title="WHAT?" class="btn btn-outlined" href="#open">WHAT?</a>
+      </nav>
+   </div>
+</div>
+</header>
+
+<div class="content-box">
+   <!-- Hero Section -->
+   <section class="section section-hero">
+   <div class="hero-box" id="mmm">
+      <div class="container">
+         <div class="hero-text align-center">
+            <div id="slides" style="margin-right: auto; margin-left: auto; padding-left: auto; padding-right: auto;">
+               <div class="slides_container">
+                  <img src="img/l1.png" alt="Slide 1">
+                  <img src="img/l2.png" alt="Slide 2">
+                  <img src="img/l3.png" alt="Slide 3">
+                  <img src="img/l4.png" alt="Slide 4">
+                  <img src="img/l5.png" alt="Slide 5">
+               </div>
+			   <center style="height:25%;">
+               <form class="destinations-form">
+                  <div class="input-line" style="height:100%;">
+                     <input type="text" name="destination" value="" class="form-input check-value" placeholder="검색어" id="searline"onkeydown="if(event.keyCode==13)find()"/>
+                     <button type="button" id="bot" name="destination-submit" class="form-submit btn btn-special" style="background: #00CC00; transition:0.5s;"onclick="find()"><i class="fa fa-search" style="float:left;font-size: 25px; "  aria-hidden="true"></i></button>
+                  </div>
+               </form>
+			   </center>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+   </div>
+   </section>
+</div>
+<section class="section section-destination">
+<!-- Title -->
+<div class="section-title">
+   <div class="container">
+      <br>
+      <br>
+      <br>
+      <br>
+
+	  <script>
+	  var openc=0;
+function GPS() {
+	var myframe=document.getElementById("forecast_embed");
+	
+	if(openc==0){
+  if (navigator.geolocation) 
+  { 
+	  openc=1;
+    navigator.geolocation.getCurrentPosition(
+	function(position) 
+    {
+    	
+		
+		myframe.src="http://forecast.io/embed/#lat="+position.coords.latitude+'&lon='+ position.coords.longitude +"&name=현재위치&color=#000000&font=Georgia&units=ca";
+    }, 
+    function(error) 
+    {
+	myframe.src="http://forecast.io/embed/#lat=37.5667&lon=126.9783&name=서울특별시&color=#000000&font=Georgia&units=ca";
+    },
+    {
+      enableHighAccuracy: false,
+      maximumAge: 0,
+      timeout: Infinity
+    });
+  } 
+  else 
+  {
+	myframe.src="http://forecast.io/embed/#lat=37.5667&lon=126.9783&name=서울특별시&color=#000000&font=Georgia&units=ca";
+  }
+	}
+}
+</script>
+
+      <iframe id="forecast_embed" onload="GPS()" frameborder="0" height="245" width="100%" src=""></iframe>
+      <br>
+      <br>
+      <br>
+      <h2 class="title">즐겨 찾는 사이트</h2>
+      <p class="sub-title">
+         당신은 이것을 좋아 하게 될 것!
+      </p>
+   </div>
+</div>
+<!-- Content -->
+<div class="container">
+   <div class="row">
+      <div class="col-md-8 col-sm-12 col-xs-24">
+         <div class="destination-box">
+            <div class="box-cover">
+               <a href="https://www.naver.com/">
+               <img src="img/site/1.png" alt="destination image"/>
+               </a>
+            </div>
+            <span class="boats-qty">1위</span>
+            <div class="box-details">
+               <div class="box-meta">
+                  <h4 class="city">네이버</h4>
+                  <p class="country">
+                     www.naver.com
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-8 col-sm-12 col-xs-24">
+         <div class="destination-box">
+            <div class="box-cover">
+               <a href="https://www.google.co.kr/">
+               <img src="img/site/2.png" alt="destination image"/>
+               </a>
+            </div>
+            <span class="boats-qty">2위</span>
+            <div class="box-details">
+               <div class="box-meta">
+                  <h4 class="city">구글</h4>
+                  <p class="country">
+                     www.google.co.kr
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-8 col-sm-12 col-xs-24">
+         <div class="destination-box">
+            <div class="box-cover">
+               <a href="https://www.daum.net/">
+               <img src="img/site/3.png" alt="destination image"/>
+               </a>
+            </div>
+            <span class="boats-qty">3위</span>
+            <div class="box-details">
+               <div class="box-meta">
+                  <h4 class="city">다음</h4>
+                  <p class="country">
+                     www.daum.net
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-8 col-sm-12 col-xs-24">
+         <div class="destination-box">
+            <div class="box-cover">
+               <a href="https://www.youtube.com/">
+               <img src="img/site/4.png" alt="destination image"/>
+               </a>
+            </div>
+            <span class="boats-qty">4위</span>
+            <div class="box-details">
+               <div class="box-meta">
+                  <h4 class="city">유튜브</h4>
+                  <p class="country">
+                     www.youtube.com
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-8 col-sm-12 col-xs-24">
+         <div class="destination-box">
+            <div class="box-cover">
+               <a href="https://www.facebook.com/">
+               <img src="img/site/5.png" alt="destination image"/>
+               </a>
+            </div>
+            <span class="boats-qty">5위</span>
+            <div class="box-details">
+               <div class="box-meta">
+                  <h4 class="city">페이스북</h4>
+                  <p class="country">
+                     www.facebook.com
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-8 col-sm-12 col-xs-24">
+         <div class="destination-box">
+            <div class="box-cover">
+               <a href="http://www.dcinside.com/">
+               <img src="img/site/6.png" alt="destination image"/>
+               </a>
+            </div>
+            <span class="boats-qty">6위</span>
+            <div class="box-details">
+               <div class="box-meta">
+                  <h4 class="city">디시인사이드</h4>
+                  <p class="country">
+                     www.dcinside.com
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="load-destinations-box">
+         <div class="col-md-8 col-sm-12 col-xs-24">
+            <div class="destination-box">
+               <div class="box-cover">
+                  <a href="http://namu.wiki/">
+                  <img src="img/site/7.png" alt="destination image"/>
+                  </a>
+               </div>
+               <span class="boats-qty">7위</span>
+               <div class="box-details">
+                  <div class="box-meta">
+                     <h4 class="city">나무위키</h4>
+                     <p class="country">
+                        namu.wiki
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-8 col-sm-12 col-xs-24">
+            <div class="destination-box">
+               <div class="box-cover">
+                  <a href="http://tistory.com/">
+                  <img src="img/site/8.png" alt="destination image"/>
+                  </a>
+               </div>
+               <span class="boats-qty">8위</span>
+               <div class="box-details">
+                  <div class="box-meta">
+                     <h4 class="city">티스토리</h4>
+                     <p class="country">
+                        tistory.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-8 col-sm-12 col-xs-24">
+            <div class="destination-box">
+               <div class="box-cover">
+                  <a href="http://www.11st.co.kr/html/main.html">
+                  <img src="img/site/9.png" alt="destination image"/>
+                  </a>
+               </div>
+               <span class="boats-qty">9위</span>
+               <div class="box-details">
+                  <div class="box-meta">
+                     <h4 class="city">11번가</h4>
+                     <p class="country">
+                        www.11st.co.kr
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-8 col-sm-12 col-xs-24">
+            <div class="destination-box">
+               <div class="box-cover">
+                  <a href="https://twitter.com/">
+                  <img src="img/site/10.png" alt="destination image"/>
+                  </a>
+               </div>
+               <span class="boats-qty">10위</span>
+               <div class="box-details">
+                  <div class="box-meta">
+                     <h4 class="city">트위터</h4>
+                     <p class="country">
+                        twitter.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-8 col-sm-12 col-xs-24">
+            <div class="destination-box">
+               <div class="box-cover">
+                  <a href="http://www.nate.com/">
+                  <img src="img/site/11.png" alt="destination image"/>
+                  </a>
+               </div>
+               <span class="boats-qty">11위</span>
+               <div class="box-details">
+                  <div class="box-meta">
+                     <h4 class="city">네이트</h4>
+                     <p class="country">
+                        www.nate.com
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-8 col-sm-12 col-xs-24">
+            <div class="destination-box">
+               <div class="box-cover">
+                  <a href="http://www.inven.co.kr/webzine/">
+                  <img src="img/site/12.png" alt="destination image"/>
+                  </a>
+               </div>
+               <span class="boats-qty">12위</span>
+               <div class="box-details">
+                  <div class="box-meta">
+                     <h4 class="city">인벤</h4>
+                     <p class="country">
+                        www.inven.co.kr
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="align-center">
+      <a href="#" class="btn btn-default btn-load-destination"><span class="text">더보기</span><i class="icon-spinner6"></i></a>
+   </div>
+</div>
+</section>
+<section class="section section-destination">
+<!-- Title -->
+<div class="section-title">
+</div>
+<footer class="main-footer">
+    <div class="container">
+       <div class="row">
+          <div class="footerLine">
+            <p style=" text-align: center; color: white" id="Line01">
+                 본 페이지는 크롬 최신 브라우저 / 반응형 / 배율 100% 기반으로 제작 했습니다// 팀장 : 윤성상
+            </p>
+            <p style=" text-align: center; color: white" id="Line01">
+                천안시 동남구 안서동 백석문화대학교/ 전화 : 010-****-****
+            </p>
+            <p style=" text-align: center; color: white" id="Line02">
+                사업자 등록번호 : 141-SZ-영원히 통신판매업 / 신고번호 : 제2017-충청천안-7887호
+            </p>
+            <p style=" text-align: center; color: white" id="Line03">
+                사업자 등록번호 : 141-SZ-영원히 통신판매업
+            </p>
+            <p style=" text-align: center; color: white" id="Line03">
+                신고번호 : 제2017-충청천안-7887호
+            </p>
+            <p style=" text-align: center; color: white">
+                ⓒ 2017 Maple Story Korea Corporation I.love.it.
+            </p>
+          </div>
+       </div>
+    </div>
+</footer>
+<!-- Scripts -->
+<script src="js/jquery.js"></script>
+<script src="js/functions.js"></script>
+
+</section>
+</body>
+</html>
