@@ -1,0 +1,100 @@
+div {
+    display: block;
+}
+
+.first{position : absolute; top : 50px; left : 35px;}
+.second{position : absolute;top : 47px; left : 215px;}
+.movei{position : absolute; top : 300px;left : 490px;}
+.menu{position : absolute; top : 300px; left : 100px}
+h1{font-size:50px;}
+.fk{font-size:29px; 
+color : black;
+text-shadow : 0px 0px 2px gray;}
+.fk3{font-size:40px; 
+color : black;
+text-shadow : 0px 0px 2px gray;}
+.fk1{font-size:40px; color : rgb(50,50,50); text-shadow : 0px 0px -3px black;}
+
+a:link    {color:gray;text-decoration:none;font-size : 40px}
+a:visited {color:gray; text-decoration:none; font-size : 40px}
+a:active  {color:red; text-decoration:none; font-size : 40px}
+a:hover  {color:red; text-decoration:none; font-size : 40px}
+
+body {
+     background: white no-repeat;   
+     }
+
+@media (min-width: 0px) {
+	.container {width: 1400px;}
+	.secontainer {width: 1400px; height: 850px; background: black no-repeat;}
+	.barline1{margin-top:6px;height: 2px; border-top: 5px solid black;}
+	.barline2{margin-top:-10px; margin-bottom:-2px; height: 2px; border-top: 5px solid black;}
+	.barline3{margin-top: 20px; margin-bottom:50px; height: 2px; border-top: 5px solid black;}
+	.marginbox{
+	background: white no-repeat;
+	height: 98%;
+	width: 1350px;
+	padding-top: 20px;
+    padding-bottom: 20px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	}
+	.menubox{width:20%; height: 100%;float : left;}
+	.menubox2{width:50px; height: 100%; margin-right:-70px; float:right;}
+	.linebox{margin-top:-52px;margin-left:0px;width:0.5%; height:90%; float:left;background-color:black;}
+	.rightbox{width:75%; height: 100%;float : left;}
+	
+}
+ul, li { margin:0; padding:0; }
+
+.menu_list {
+	width: 230px;
+}
+.menu_list a:hover{	
+	width: 210px;
+}
+.menu_head{
+	padding: 5px 10px;
+	font-size:30px;
+	cursor: pointer;
+	position: relative;
+	margin:1px;
+    font-weight:bold;
+    border-radius: 3px;
+	background-color:#707070;
+	border-top:5px solid #000000;
+	border-bottom:5px solid #000000;
+	border-right:3px solid #000000;
+	border-left:3px solid #000000;
+}
+.menu_body {
+	display:none;
+	margin-left:20px;
+	margin-top:-5px;
+}
+.menu_body a{
+  font-size:30px;
+  border-radius: 3px;
+  border-left:3px solid #000000;
+  border-right:3px solid #000000;
+  border-bottom:5px solid #000000;
+  display:block;
+  color:black;
+  background-color:#9f9f9f;
+  padding-left:10px;
+  font-weight:bold;
+  text-decoration:none;
+}
+.menu_body a:hover{
+  color: #000000;
+  font-size:32px;
+  margin-left:10px;
+  text-decoration:none;
+  border-radius: 3px;
+  background-color:#cccccc;
+  border-left:5px solid #000000;
+  border-right:5px solid #000000;
+  border-bottom:5px solid #000000;
+  }

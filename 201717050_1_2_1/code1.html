@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+ <head>
+
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body style="background: rgb(60,60,60)">
+ <span style="font-size:18px; color:white;">
+ <pre>
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class killstone : MonoBehaviour {
+
+    public GameObject pl;
+    public GameObject button;
+    public GameObject check1;
+    public GameObject hpv;
+    public GameObject item1;
+    bool check2 = false;
+    bool check3 = false;
+    bool check4 = false;
+    int hps, nanugi;
+    float fx, fy, fz, dam;
+    public int str = 1;
+    void Start () {
+        button.SetActive(false);
+        check1 = GameObject.FindGameObjectWithTag("Player");
+    }
+    void Update()
+    {
+        if(check2 == true)
+        {
+            Debug.Log(check1);
+            check2 = false;
+        }
+        if (Vector3.Distance(pl.transform.position, check1.transform.position) > 2)
+        {
+            button.gameObject.SetActive(false);
+        }
+        if(check3 == true)
+        {
+            hpv = check1.transform.Find("hpvar").gameObject;
+            check4 = true;
+            check3 = false;
+        }
+        if (check4 == true)//종결문
+        {
+            if (hpv.transform.localScale.x <= 0)
+            {
+                fx=check1.transform.position.x;
+                fy = check1.transform.position.y;
+                fz = check1.transform.position.z;
+                int random = Random.Range(2,5);
+                for(int drop = 0; drop<random; drop++)
+                {
+                    GameObject.Instantiate<GameObject>(item1).transform.localPosition = new Vector3(fx,fy+0.5f,fz);
+                }
+                Destroy(check1);
+                Destroy(hpv);
+                hps = 0;
+                check1 = GameObject.FindGameObjectWithTag("Player");
+                check4 = false;
+                check3 = false;
+
+            }
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (check4 == true && Vector3.Distance(pl.transform.position, check1.transform.position) < 3)
+        {
+            
+            dam = hps-str;
+            hps -= str;
+            hpv.transform.localScale = new Vector3(dam/nanugi, 0.1f, 1f);
+        }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("jual"))
+        {
+            check2 = true;
+            check1 = other.gameObject;
+            button.gameObject.SetActive(true);
+        }
+    }
+    public void attack()
+    {
+        hps = 0;
+        if(check1.name.Contains("흑수정"))
+        {
+            hps = 100;
+            check3 = true;
+        }
+        if (check1.name.Contains("자수정"))
+        {
+            hps = 300;
+            check3 = true;
+        }
+        if (check1.name.Contains("에메랄드"))
+        {
+            hps = 500;
+            check3 = true;
+        }
+        if (check1.name.Contains("금"))
+        {
+            hps = 1000;
+            check3 = true;
+        }
+        if (check1.name.Contains("루비"))
+        {
+            hps = 2000;
+            check3 = true;
+        }
+        if (check1.name.Contains("다이아몬드"))
+        {
+            hps = 4000;
+            check3 = true;
+        }
+        if (check1.name.Contains("코어젬"))
+        {
+            hps = 8000;
+            check3 = true;
+        }
+        nanugi = hps;
+        button.gameObject.SetActive(false);
+    }
+}
+</pre>
+</span>
+ </body>
+</html>
